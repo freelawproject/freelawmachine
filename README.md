@@ -75,6 +75,14 @@ Don't like the easy way? Skip ahead to "Building the Vagrant Box (Optional)"
 and complete those steps first, then run through the "Easy Way" steps. This is
 not for the feint of heart.
 
+
+#### Starting Solr
+If Solr is not up and running, you will have to start it manually.
+  
+  `sudo service solr start`
+
+
+
 #### Starting CourtListener
 From within the `/var/www/courtlistener` directory, simply use Django's manage
 scripts to launch the app. Make sure you pay close attention to adding the IP
@@ -124,6 +132,10 @@ up with:
 
 You should now have some results on the landing page as well as fully searchable
 opinions!
+
+
+To check for logs during the setup, Open your browser and
+navigate to : [http://localhost:8999](http://localhost:8999)
 
 
 ### Building the Vagrant Box (Optional)
