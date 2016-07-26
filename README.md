@@ -187,6 +187,11 @@ wipe it out when you've built a new box version and want to start over.
   * 8 GB RAM
   * [Virtualbox 5.x](https://www.virtualbox.org/)
   * Iffy VT-X support or running inside another VM (hence 32-bit VM)
+* There are some space requirements
+  * Typically takes around 9 GB of space and attempts to put the VM and Vagrant stuff in your home dir
+  * For Virtual Box, you will need to run this command: VBoxManage setproperty machinefolder $your_folder$
+  * For Vagrant, you will need to export or set your bashrc var VAGRANT_HOME
+  * Make sure that you remove any remnants of .vagrant* or Virtual Machines from your home dir
 
 ## Possible Future Goals
 * VMWare support (cost $$$?)
