@@ -31,7 +31,7 @@
                 "keyboard-configuration/modelcode=SKIP keyboard-configuration/layout=USA keyboard-configuration/variant=USA console-setup/ask_detect=false ",
                 "initrd=/install/initrd.gz -- <enter>"
             ],
-            "headless": false,
+            "headless": true,
             "boot_wait": "10s",
             "disk_size": 2048,
             "guest_os_type": "Ubuntu_64",
@@ -50,8 +50,8 @@
             "guest_additions_path": "VBoxGuestAdditions.iso",
             "virtualbox_version_file": ".vbox_version",
             "vboxmanage": [
-              ["modifyvm", "{{.Name}}", "--memory", "1024"],
-              ["modifyvm", "{{.Name}}", "--cpus", "1"]
+              ["modifyvm", "{{.Name}}", "--memory", "4096"],
+              ["modifyvm", "{{.Name}}", "--cpus", "2"]
             ]
         }
     ],
