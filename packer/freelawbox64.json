@@ -50,8 +50,8 @@
             "guest_additions_path": "VBoxGuestAdditions.iso",
             "virtualbox_version_file": ".vbox_version",
             "vboxmanage": [
-              ["modifyvm", "{{.Name}}", "--memory", "4096"],
-              ["modifyvm", "{{.Name}}", "--cpus", "2"]
+              ["modifyvm", "{{.Name}}", "--memory", "512"],
+              ["modifyvm", "{{.Name}}", "--cpus", "1"]
             ]
         }
     ],
