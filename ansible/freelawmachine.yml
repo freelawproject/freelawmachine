@@ -27,7 +27,11 @@
     - vagrantbox
     - redis
     - celery
-    - postgres
+    - role: postgres
+      tags:
+        - postgres
     - solr
     - ocr
-    - courtlistener
+    - role: courtlistener
+      tags:
+        - courtlistener

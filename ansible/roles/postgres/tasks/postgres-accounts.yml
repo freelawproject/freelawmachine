@@ -1,11 +1,4 @@
 ---
-- name: configure postgres super user
-  become_user: postgres
-  postgresql_user:
-    name=postgres
-    password="{{ pg_password }}"
-    login_password="{{ pg_password }}"
-
 - name: configure django postgres user
   become_user: postgres
   postgresql_user:

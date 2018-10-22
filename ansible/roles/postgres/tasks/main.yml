@@ -14,8 +14,16 @@
     autoremove=yes
   with_items:
     - postgresql-9.3
-    - postgresql-contrib
+    - postgresql-contrib-9.3
     - python-psycopg2
+
+# Do this first before we change pg_hba.conf so we can guarantee we have the right password.
+- name: configure postgres super user
+  become_user: postgres
+  postgresql_user:
+    name=postgres
+    password="{{ pg_password }}"
+    login_password="{{ pg_password }}"
 
 - name: configure postgres using template file
   become_user: root
@@ -45,13 +53,6 @@
     mode=0600
 
 - include: postgres-accounts.yml
-
-#- name: configure postgres using template file
-#  become_user: root
-#  template:
-#    src=pg_hba.conf
-#    dest=/etc/postgresql/9.3/main/pg_hba.conf
-#
 
 - name: bounce postgres
   become_user: root
