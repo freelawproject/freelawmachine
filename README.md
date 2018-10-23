@@ -111,22 +111,22 @@ All of the tools required to build the box using [Packer](https://packer.io) are
 
   1. Grab the latest Free Law Machine source:
 
-    `git clone https://github.com/freelawproject/freelawmachine`
+    git clone https://github.com/freelawproject/freelawmachine
 
   2. Jump into the packer directory:
 
-    `cd packer`
+    cd packer
 
   3. Build the box! (Yes, it's that simple. Since it's configured headless, it
   may appear nothing is happening for a little while. It's ok. This could take
   about 20-30 minutes!)
 
-    `packer build freelawbox64.json`
+    packer build freelawbox64.json
 
   4. Install the Vagrant box on your local machine. The new _.box_ file will
   have a timestamp in the filename, so make sure to add the correct file:
 
-    `vagrant box add freelawbox64-{version}.box --name freelawproject/freelawbox64`
+    vagrant box add freelawbox64-{version}.box --name freelawproject/freelawbox64
 
 Voila! You now have a new Vagrant box installed locally. You can even share the
 _.box_ file with others the old fashioned way, host it at a URL, etc. (Vagrant
