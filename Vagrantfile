@@ -2,8 +2,10 @@
 # vi: set ft=ruby :
 
 $git_script = <<SCRIPT
-if [ ! -d /vagrant/freelawmachine ]; then
+if [ ! -d /vagrant/ansible ]; then
   git clone https://github.com/freelawproject/freelawmachine /vagrant/freelawmachine
+  echo "copying ansible directory to /vagrant"
+  cp -a /vagrant/freelawmachine/ansible /vagrant/ansible
 fi
 SCRIPT
 
@@ -34,9 +36,9 @@ Vagrant.configure(2) do |config|
 
 	# Use Ansible to set up CourtListener
   config.vm.provision :ansible_local do |ansible|
-    ansible.provisioning_path = "/vagrant/freelawmachine/ansible"
+    ansible.provisioning_path = "/vagrant/ansible"
     ansible.playbook = "freelawbox.yml"
     ansible.limit = "all"
-    ansible.inventory_path = "/vagrant/freelawmachine/ansible/config/hosts_local"
+    ansible.inventory_path = "/vagrant/ansible/config/hosts_local"
   end
 end
