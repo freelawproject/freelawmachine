@@ -6,3 +6,15 @@ juriscraper_log_directory: /var/log/juriscraper
 
 phantomjs_version: 2.1.1
 phantomjs_symlink_root: /usr/local/bin
+
+# github repo
+judge_pics_repo: "git+https://github.com/freelawproject/judge-pics@master"
+
+# cloned repo
+# Each time the virtual machine is provisioned, the judge-pics repo
+# is downloaded from github and built into a python package.
+# Alternatively, the repo can be cloned into the freelawmachine
+# working directory to reduce internet usage when provisioning.
+# If this is preferred, comment the above variable, and uncomment
+# the variable below.
+# judge_pics_repo: "/vagrant/judge-pics"
