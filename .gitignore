@@ -4,11 +4,15 @@ packer/packer_cache
 packer/iso/*.iso
 packer/output-virtualbox-iso/
 
+# cloned repos to be used in VM
+/judge-pics
+
 # vagrant stuff
-.vagrant
+/.vagrant
 flp/courtlistener
 flp/juriscraper
 !flp/README.md
 courtlistener/
 !ansible/roles/courtlistener
 .DS_Store
+

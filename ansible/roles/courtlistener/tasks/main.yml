@@ -73,7 +73,7 @@
 - name: installing Judge-Pics
   become_user: "{{ cl_user }}"
   pip:
-    name="git+https://github.com/freelawproject/judge-pics@master"
+    name="{{ judge_pics_repo }}"
     editable=False
     virtualenv="{{ virtualenv_directory }}"
 
