@@ -1,6 +1,12 @@
 Free Law (Virtual) Machine v2.1.0
 ==================================
 
+## NOW OBSOLETE
+
+This repo is now obsolete, replaced by docker. See details in the CourtListener repository.
+
+--------------------
+
 Want to help develop Free Law Project functionality?
 
 Follow the steps below to build a development environment for the [Free Law Project](https://github.com/freelawproject) components like the [CourtListener](https://github.com/freelawproject/courtlistener) website.  You will also be able to build new or custom Vagrant boxes and contribute back to this freelawmachine repository.
